@@ -1,0 +1,9 @@
+Config/secrets
+Packages
+.build
+xcuserdata
+*.xcodeproj
+DerivedData/
+.DS_Store
+data
+Public/uploads/

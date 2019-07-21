@@ -1,0 +1,36 @@
+#set("title") { Ugalek.com - Login* }
+
+#set("body") {
+<div class="page-header header-filter clear-filter" data-parallax="true" style="background-image: url('uploads/background3.jpg');">
+    <div class="position-relative overflow-hidden text-center">
+        <div class="col-md-4 p-lg-5 mx-auto my-5">
+            <div class="card shadow-sm p-3 mb-5 bg-white rounded">
+                <div class="card-body">
+                    <h3 class="panel-title">Login</h3>
+                    <form action="/login" method="POST">
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="basic-addon1"><i class="fas fa-user"></i></span>
+                            </div>
+                            <input type="username" name="username" class="form-control" id="username" placeholder = "Username" aria-describedby="basic-addon1"/>
+                        </div>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="basic-addon2"><i class="fas fa-key"></i></span>
+                            </div>
+                            <input type="password" name="password" class="form-control" id="password" placeholder = "Password" aria-describedby="basic-addon2"/>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-block btn-outline-success">Sign in</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+}
+
+#embed("base")

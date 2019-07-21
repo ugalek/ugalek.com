@@ -1,0 +1,96 @@
+#set("title") { Ugalek.com - Edit post* }
+
+#set("body") {
+<div class="container mt-3 p-3">
+    <h1 class="text-center">Post</h1>
+    <form method="POST" action="#(action)" id="post-form">
+        <div class="form-row">
+            <div class="form-group col-md-9">
+                <label for="inputTitle">Title</label>
+                <input type="text" name="title" #if(post != nil) { value="#(post.title)" } class="form-control form-control-sm" id="inputTitle" placeholder="Title of post ... ">
+            </div>
+            <div class="form-group col-md-3">
+                <label for="inputPublished_date">Author</label>
+                <select class="custom-select custom-select-sm" name="author" value="#(post.author)" form="post-form">
+                    <option value="#(user.id)">#(user.username)</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-9">
+                <label for="inputSlug">Slug</label>
+                <input type="text" name="slug" #if(post != nil) { value="#(post.slug)" } class="form-control form-control-sm" id="inputSlug" aria-describedby="buttonAddSlug"/>
+                <input type="text" name="pslug" class="sr-only">
+            </div>
+            <div class="form-group col-md-3">
+                <label for="inputLanguage">Language</label>
+                <select class="custom-select custom-select-sm" name="lang" id="inputLanguage" form="post-form">
+                    #if(post.lang == "EN") {
+                    <option selected value="EN">EN</option>
+                    } else {
+                    <option value="EN">EN</option>
+                    }
+                    #if(post.lang == "FR") {
+                    <option selected value="FR">FR</option>
+                    } else {
+                    <option value="FR">FR</option>
+                    }
+                    #if(post.lang == "RU") {
+                    <option selected value="RU">RU</option>
+                    } else {
+                    <option value="RU">RU</option>
+                    }
+                </select>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-5">
+                <label for="inputCategory">Category</label>
+                <select id="inputCategory" name="category" class="custom-select custom-select-sm">
+                    #for(category in categories) {
+                    #if(post.category == category.id) {
+                    <option selected value="#(category.id)">#(category.name)</option>
+                    } else {
+                    <option value="#(category.id)">#(category.name)</option>
+                    }
+                    }
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputPreview">Entry excerpt text</label>
+            <textarea name="preview" class="form-control form-control-sm" id="inputPreview" aria-describedby="bodyHelp" rows="7" placeholder="Preview text of post ...">#if(post != nil) {#(post.preview)}</textarea>
+        </div>
+        <hr class="my-4">
+        <div class="form-group">
+            <label for="inputText">Entry body</label>
+            <textarea name="text" class="form-control form-control-sm" id="inputText" aria-describedby="bodyHelp" rows="7" placeholder="Text of post ...">#if(post != nil) {#(post.text)}</textarea>
+            <small id="bodyHelp" class="form-text text-muted">use Markdown syntax.</small>
+        </div>
+        #if(post != nil) {
+        <div class="form-group">
+            <label for="inputHTMLText">HTML body text</label>
+            <textarea name="textHtml" class="form-control form-control-sm" id="inputHTMLText" rows="7" placeholder="HTML Text of post ...">#if(post != nil) {#(post.text_html)}</textarea>
+        </div>
+        }
+        
+        <div class="form-inline">
+            <label class="p-1">Published</label>
+            <div class="input-group date p-1" id="pubdate" data-target-input="nearest">
+                <input type="text" name="publishedAt" #if(post != nil) { value="#(formdate(post.published_at))" } class="form-control datetimepicker-input form-control-sm " data-target="#pubdate"/>
+                <div class="input-group-append" data-target="#pubdate" data-toggle="datetimepicker">
+                    <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                </div>
+            </div>
+            <div class="custom-control custom-switch">
+                <input type="checkbox" name="isPublished" class="custom-control-input" id="switchIsPublished" #if(post != nil && post.is_published) { checked } >
+                <label class="custom-control-label" for="switchIsPublished">Published</label>
+            </div>
+        </div>
+        <button type="submit" value="create" class="btn btn-success">Save</button>
+    </form>
+</div>
+}
+
+#embed("base")
+

@@ -1,0 +1,36 @@
+#set("title") { Ugalek.com - Profile* }
+
+#set("body") {
+<div class="page-header header-filter clear-filter" data-parallax="true" style="background-image: url('uploads/ptitle2.jpg');">
+    <div class="position-relative overflow-hidden text-center">
+        <div class="col-md-4 p-lg-5 mx-auto my-5">
+            <!-- Card -->
+            <div class="card shadow-sm bg-white rounded">
+                <div class="card-body">
+                    <div class="card">
+                        <div class="card-header">
+                            
+                            Profile <span class="badge badge-info">
+                                #if(user.is_admin) { admin } else { user }
+                            </span>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Username: #(user.username)</h5>
+                            <p class="card-text">Name: #(user.name)</p>
+                            <a href="/logout" class="btn btn-block btn-outline-danger">logout</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Card -->
+            
+            
+        </div>
+    </div>
+</div>
+
+
+}
+
+#embed("base")
+

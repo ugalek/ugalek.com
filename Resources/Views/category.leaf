@@ -1,0 +1,131 @@
+#set("title") { Ugalek.com - Category* }
+
+#set("body") {
+<div class="container mt-3">
+    <!-- Modal Add new Category-->
+    #if(authUser.isAdmin) {
+    <div class="modal fade" id="ModalAddNewCategory" tabindex="-1" role="dialog" aria-labelledby="ModalAddNewCategoryLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="ModalAddNewCategory">Add new category</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <form method="POST" action="/category">
+                    <div class="modal-body">
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="inputName">Name</label>
+                                <input type="text" name="name" class="form-control form-control-sm" id="inputName" placeholder="Name of category ... ">
+                                    </div>
+                            <div class="form-group col-md-6">
+                                <label for="inputSlug">Slug</label>
+                                <input type="text" name="slug" class="form-control form-control-sm" id="inputSlug" placeholder="Slug of category ... ">
+                                <input type="text" name="pslug" class="sr-only">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputPreview">Entry description</label>
+                            <textarea name="description" class="form-control form-control-sm" id="inputDescription" aria-describedby="bodyHelp" rows="7" placeholder="Description text of category ..."></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputLogo">Path to logo</label>
+                            <input type="text" name="logo" class="form-control form-control-sm" id="inputLogo" placeholder="Logo of category ... ">
+                                </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-outline-success btn-sm">Save changes</button>
+                        <button type="button" class="btn btn-outline-secondary btn-sm" data-dismiss="modal">Close</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    }
+   <!-- Modal Modal Add new Category -->
+   
+    #if(authUser.isAdmin) {
+    <h1 class="text-center"> My categories
+        <button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#ModalAddNewCategory">+</button>
+    </h1>
+    } else { <h1 class="text-center"> My categories </h1>
+    }
+    #for(items in categories) {
+    <div class="card-deck">
+    #for(category in items.categoryArr) {
+    
+    <!-- Modal Edit Category-->
+    #if(authUser.isAdmin) {
+    <div class="modal fade" id="ModalEditCategory#(category.id)" tabindex="-1" role="dialog" aria-labelledby="ModalEditCategoryLabel#(category.id)" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="ModalEditCategory#(category.id)">Edit category</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <form method="POST" action="/category/#(category.id)/update">
+                    <div class="modal-body">
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="inputName">Name</label>
+                                <input type="text" name="name" value="#(category.name)" class="form-control form-control-sm" id="inputName" placeholder="Name of category ... ">
+                                    </div>
+                            <div class="form-group col-md-6">
+                                <label for="inputSlug">Slug</label>
+                                <input type="text" name="slug" value="#(category.slug)" class="form-control form-control-sm" id="inputSlug" placeholder="Slug of category ... ">
+                                <input type="text" name="pslug" value="#(category.slug)" class="sr-only">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputDescription">Entry description</label>
+                            <textarea name="description" class="form-control form-control-sm" id="inputDescription" rows="7" placeholder="Description text of category ...">#(category.description)</textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputLogo">Path to logo</label>
+                            <input type="text" name="logo" value="#(category.logo)" class="form-control form-control-sm" id="inputLogo" placeholder="Logo of category ... ">
+                                </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-outline-success btn-sm">Save changes</button>
+                        <button type="button" class="btn btn-outline-secondary btn-sm" data-dismiss="modal">Close</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    }
+    <!-- Modal Modal Edit Category -->
+    
+    <div class="card">
+        <img src="#(category.logo)" class="card-img-top">
+            <div class="card-body">
+                <h5 class="card-title">#(category.name)</h5>
+                <p class="card-text">#(category.description)</p>
+            </div>
+            #if(authUser.isAdmin) {
+            <div class="card-footer">
+                <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+                    <div class="btn-group mr-2" role="group" aria-label="First group">
+                        <button type="button" class="btn btn-outline-secondary btn-sm" data-toggle="modal" data-target="#ModalEditCategory#(category.id)"><i class="fas fa-edit"></i></button>
+                    </div>
+                    <div class="btn-group mr-2" role="group" aria-label="Second group">
+                        <form method="POST" action="category/#(category.id)/delete">
+                            <button type="submit" class="btn btn-outline-danger btn-sm"><i class="fas fa-trash"></i></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            }
+            </div>
+    }
+    </div>
+    </br>
+    }
+</div>
+}
+
+#embed("base")

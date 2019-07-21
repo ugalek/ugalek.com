@@ -1,0 +1,36 @@
+#set("title") { Ugalek.com - Web Auth* }
+
+#set("body") {
+<div class="container mt-3">
+<p>Register page</p>
+<br />
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-body">
+                <h3 class="card-title">Register</h3>
+                <form action="/register" method="POST">
+                    <div class="form-group">
+                        <label for="username">Username</label>
+                        <input type="username" name="username" class="form-control" id="username" />
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" name="password" class="form-control" id="password" />
+                    </div>
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="name" name="name" class="form-control" id="name" />
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" class="btn btn-block btn-primary" value="register" />
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+}
+
+#embed("base")

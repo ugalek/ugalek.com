@@ -1,0 +1,73 @@
+#set("title") { Ugalek.com - User* }
+
+#set("body") {
+<div class="container mt-3">
+<h1 class="text-center"> List of Users </h1>
+<table class="table table-sm shadow p-3 mb-5 bg-white rounded">
+    <thead class="thead-light">
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Username</th>
+            <th scope="col">Name</th>
+            <th scope="col">Role</th>
+            <th scope="col">Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        #for(userView in users) {
+        <tr>
+            <th scope="row">#(userView.id)</th>
+            <td>#(userView.username)</td>
+            <td>#(userView.name)</td>
+            <td><span class="badge badge-info">
+                #if(userView.is_admin=="true") { admin } else { user }
+            </span></td>
+            <td><form method="POST" action="users/#(userView.id)/delete">
+                <input class="btn btn-outline-danger btn-sm" type="submit" value="Delete" />
+                <button type="button" class="btn btn-outline-secondary btn-sm" data-toggle="collapse"
+                    data-target="#collapse#(userView.id)" aria-expanded="false" aria-controls="collapse#(userView.id)">Edit</button>
+            </form>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row">
+            <td colspan="4">
+            <div class="collapse" id="collapse#(userView.id)">
+                <form method="POST" action="/users/#(userView.id)/update">
+                    <div class="form-row align-items-center">
+                        <div class="col-sm-3 my-1">
+                            <small id="staticUserName" class="form-text text-muted">
+                                Username
+                            </small>
+                            <input type="text" class="form-control form-control-sm" readonly aria-describedby="staticUserName" value="#(userView.username)">
+                        </div>
+                        <div class="col-sm-3 my-1">
+                            <small id="staticUserName" class="form-text text-muted">
+                                Name
+                            </small>
+                            <input type="text" class="form-control form-control-sm" aria-describedby="staticName" value="#(userView.name)" name="name">
+                        </div>
+                        <div class="col-auto my-1">
+                            <div class="custom-control custom-switch">
+                                <input type="hidden"   name="isAdmin" value="false" />
+                                <input type="checkbox" class="custom-control-input"
+                                    id="isAdminCheck#(userView.id)" name="isAdmin" value="true" #if(userView.is_admin=="true") { checked }>
+                                <label class="custom-control-label" for="isAdminCheck#(userView.id)">Admin</label>
+                            </div>
+                        </div>
+                        <div class="col-auto my-1">
+                            <button type="submit" class="btn btn-outline-success btn-sm">OK</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            </td>
+            </th>
+        </tr>
+        }
+    </tbody>
+</table>
+</div>
+}
+
+#embed("base")

@@ -1,0 +1,13 @@
+{
+    "menu.home": "Домой",
+    "menu.articles": "Записи",
+    "menu.categories": "Категории",
+    "menu.users": "Пользователи",
+    "menu.search": "Поиск",
+    "title.connect": "Контакты",
+    "title.home": "Ugalek.com - Обо мне",
+    "title.posts": "Ugalek.com - Записи",
+    "title.login": "Ugalek.com - Вход",
+    "title.profile": "Ugalek.com - Профиль",
+    "footer": "Этот сайт написан на Swift и Vapor. Он создан для тестирования программирования и где я могу делиться вещами, которые мне нравятся и я изучаю, интересных мест и прочего."
+}

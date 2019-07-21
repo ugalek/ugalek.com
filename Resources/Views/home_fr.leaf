@@ -1,0 +1,57 @@
+#set("title") { Ugalek.com - À propos }
+
+#set("body") {
+
+<div class="parallax-container valign-wrapper content">
+    <div class="parallax_m"><img src="uploads/background1.jpg"></div>
+</div>
+
+<div class="container marketing">
+    <div class="row">
+        <div class="col-lg-4">
+            <h1 class="display-3"><i class="far fa-user-circle"></i></h1>
+            <h2>Qui suis-je&nbsp;?</h2>
+            <p class="text-left">
+                Je suis Galina, développeuse web et mobile (iOS) originaire du Kazakhstan (<a href="https://en.wikipedia.org/wiki/Astana" target="_blank">d'Astana</a>).
+            </p>
+        </div>
+        <div class="col-lg-4">
+            <h1 class="display-3"><i class="far fa-heart"></i></h1>
+            <h2>Mes hobbies</h2>
+            <p class="text-left">Voyager, la photo, le patin à glace, les cartes postales et les loisirs créatifs.</p>
+        </div>
+        <div class="col-lg-4">
+            <h1 class="display-3"><i class="fab fa-leanpub"></i></h1>
+            <h2>Actuellement</h2>
+            <p class="text-left">
+                Je suis en auto-formation développement web (front-end) et mobile (iOS) et j'apprends le français.
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="parallax-container valign-wrapper content">
+    <div class="parallax_m"><img src="uploads/background2.jpg"></div>
+</div>
+
+<div class="container marketing">
+    <div class="row">
+        <div class="col-lg-12">
+            <h2 class="text-center">À propos de ce site</h2>
+            <p class="text-center">
+                Ce site est propulsé par <a href="https://en.wikipedia.org/wiki/Swift_(programming_language)" target="_blank">Swift</a> et 
+                <a href="https://vapor.codes" target="_blank">Vapor</a>. Il est à la fois mon bac à sable et mon carnet de notes.
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="parallax-container valign-wrapper content">
+    <div class="parallax_m"><img src="uploads/background3.jpg"></div>
+</div>
+
+}
+
+#embed("base")
+
+

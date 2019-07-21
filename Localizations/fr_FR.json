@@ -1,0 +1,13 @@
+{
+    "menu.home": "Home",
+    "menu.articles": "Articles",
+    "menu.categories": "Categories",
+    "menu.users": "Users",
+    "menu.users": "Rechercher",
+    "title.connect": "Connecter",
+    "title.home": "Ugalek.com - À propos",
+    "title.posts": "Ugalek.com - Posts",
+    "title.login": "Ugalek.com - Login",
+    "title.profile": "Ugalek.com - Profile",
+    "footer": "Ce site est propulsé par Swift et Vapor. Il est à la fois mon bac à sable et mon carnet de notes."
+}

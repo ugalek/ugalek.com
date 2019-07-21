@@ -1,0 +1,13 @@
+{
+    "menu.home": "Home",
+    "menu.articles": "Articles",
+    "menu.categories": "Categories",
+    "menu.users": "Users",
+    "menu.search": "Search",
+    "title.connect": "Connect",
+    "title.home": "Ugalek.com - About",
+    "title.posts": "Ugalek.com - Posts",
+    "title.login": "Ugalek.com - Login",
+    "title.profile": "Ugalek.com - Profile",
+    "footer": "This site is powered by Swift and Vapor. It is both my programming sandbox and my notebook."
+}

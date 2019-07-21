@@ -1,0 +1,53 @@
+#set("title") { Ugalek.com - О сайте}
+
+#set("body") {
+
+<div class="parallax-container valign-wrapper content">
+    <div class="parallax_m"><img src="uploads/background1.jpg"></div>
+</div>
+
+<div class="container marketing">
+    <div class="row">
+        <div class="col-lg-4">
+            <h1 class="display-3"><i class="far fa-user-circle"></i></h1>
+            <h2>Кто я?</h2>
+            <p class="text-left">
+            Меня зовут Галина, я программист из Казахстана, <a href="https://en.wikipedia.org/wiki/Astana" target="_blank">Астана</a>.</p>
+        </div>
+        <div class="col-lg-4">
+            <h1 class="display-3"><i class="far fa-heart"></i></h1>
+            <h2>Мои хобби</h2>
+            <p class="text-left">Мне нравится посещать новые города, катание на коньках, фотографирование, порой рукоделием (украшения или скрапбукинг), а так же коллекционирую открытки.</p>
+        </div>
+        <div class="col-lg-4">
+            <h1 class="display-3"><i class="fab fa-leanpub"></i></h1>
+            <h2>На данный момент</h2>
+            <p class="text-left">Я изучаю front-end технологии и мобильную разработку (iOS), а так же французский язык. 
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="parallax-container valign-wrapper content">
+    <div class="parallax_m"><img src="uploads/background2.jpg"></div>
+</div>
+
+<div class="container marketing">
+    <div class="row">
+        <div class="col-lg-16">
+            <h2 class="text-center">Этот сайт</h2>
+            <p>Этот сайт написан на <a href="https://en.wikipedia.org/wiki/Swift_(programming_language)" target="_blank">Swift</a> и <a href="https://vapor.codes" target="_blank">Vapor</a>.
+            Он создан для тестирования программирования и где я могу делиться вещами, которые мне нравятся и я изучаю, интересных мест и прочего.
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="parallax-container valign-wrapper content">
+    <div class="parallax_m"><img src="uploads/background3.jpg"></div>
+</div>
+
+}
+
+#embed("base")
+

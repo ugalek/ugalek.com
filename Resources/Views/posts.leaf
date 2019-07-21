@@ -1,0 +1,72 @@
+#set("title") { Ugalek.com - Posts* }
+
+#set("body") {
+<div class="d-flex justify-content-start bd-highlight mt-3">
+    <div class="p-2 bd-highlight">
+        <nav class="nav flex-column sticky-top">
+            <ul class="table-of-contents list-unstyled">
+            #for(category in categories) {
+            <li>
+            <a href="/categories/#(category.slug)">#(category.name)</a>
+            </li>
+            }
+            </ul>
+        </nav>
+    </div>
+    <div class="p-2 bd-highlight px-md-5"></div>
+    <div class="p-2 flex-fill bd-highlight px-md-5">
+        #if(authUser.username != "") {
+        <div class="text-right py-3">
+            <a href="/post" class="btn btn-outline-success btn-sm" role="button" aria-pressed="true">Add new post</a>
+        </div>
+        }
+        
+        #for(postView in posts) {
+        <div class="card shadow">
+            <div class="card-header">
+                <div class="row mx-md-n5">
+                    <div class="col px-md-5"><a href="/posts/#(postView.post.slug)" class="text-dark">#(postView.post.title)</a></div>
+                    <div class="col px-md-5 text-right">
+                        #if(authUser.username != "") {
+                        <a class="btn btn-outline-secondary btn-sm" href="/post/#(postView.post.id)" role="button"><i class="fas fa-edit"></i></a>
+                        }
+                    </div>
+                </div>
+            </div>
+            <div class="card-body">
+                <p class="card-text">
+                #(postView.post.preview)
+                </p>
+                <small class="form-text text-muted">
+                    #date(postView.post.published_at, "dd MMMM yyyy")
+                </small>
+            </div>
+            <div class="card-footer text-muted">
+                <div class="row mx-md-n5">
+                    <div class="col px-md-5"><span class="badge badge-secondary">#(postView.category.name)</span></div>
+                    <div class="col px-md-5 text-right">
+                        #(postView.post.lang)
+                    </div>
+                </div>
+            </div>
+        </div>
+        </br>
+        }
+    </div>
+    <div class="p-2 bd-highlight px-md-5"></div>
+    <div class="p-2 bd-highlight px-md-5"></div>
+</div>
+<div class="container">
+    <nav class="pg" aria-label="Page navigation">
+        <ul class="pagination justify-content-center">
+            #for(links in paginationLinks) {
+            <li class="#(links.style)"><a class="page-link" href="#(links.path)">#(links.page)</a></li>
+            }
+        </ul>
+    </nav>
+</div>
+}
+
+#embed("base")
+
+

@@ -1,0 +1,56 @@
+#set("title") { Ugalek.com - About }
+
+#set("body") {
+
+<div class="parallax-container valign-wrapper content">
+    <div class="parallax_m"><img src="uploads/background1.jpg"></div>
+</div>
+
+<div class="container marketing">
+    <div class="row">
+        <div class="col-lg-4">
+            <h1 class="display-3"><i class="far fa-user-circle"></i></h1>
+            <h2>Who am I?</h2>            
+            <p class="text-left">
+                I'm Galina, a web and mobile developer from Kazakhstan (<a href="https://en.wikipedia.org/wiki/Astana" target="_blank">Astana</a>).
+            </p>
+        </div>
+        <div class="col-lg-4">
+            <h1 class="display-3"><i class="far fa-heart"></i></h1>
+            <h2>My hobbies</h2>
+            <p class="text-left">
+                Traveling, photography, ice skating, postcards and hand-made things.</p>
+        </div>
+        <div class="col-lg-4">
+            <h1 class="display-3"><i class="fab fa-leanpub"></i></h1>
+            <h2>Currently</h2>
+            <p class="text-left">
+                I'm self-learning web (front-end) and mobile (iOS) development and French.
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="parallax-container valign-wrapper content">
+    <div class="parallax_m"><img src="uploads/background2.jpg"></div>
+</div>
+
+<div class="container marketing">
+    <div class="row">
+        <div class="col-lg-12">
+            <h2 class="text-center">About this site</h2>
+            <p class="text-center">This site is powered by <a href="https://en.wikipedia.org/wiki/Swift_(programming_language)" target="_blank">Swift</a> and <a href="https://vapor.codes" target="_blank">Vapor</a>.
+            It is both my programming sandbox and my notebook. 
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="parallax-container valign-wrapper content">
+    <div class="parallax_m"><img src="uploads/background3.jpg"></div>
+</div>
+
+}
+
+#embed("base")
+

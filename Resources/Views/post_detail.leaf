@@ -1,0 +1,50 @@
+#set("title") { Ugalek.com - #(post.post.title)* }
+
+#set("body") {
+<div class="d-flex justify-content-start bd-highlight mt-3">
+    <div class="p-2 bd-highlight">
+        <nav class="nav flex-column sticky-top">
+            <ul class="table-of-contents list-unstyled">
+                #for(category in categories) {
+                <li>
+                    <a href="/categories/#(category.slug)">#(category.name)</a>
+                </li>
+                }
+            </ul>
+        </nav>
+    </div>
+    <div class="p-2 bd-highlight px-md-5"></div>
+    <div class="p-2 flex-fill bd-highlight px-md-5">
+        #if(authUser.isAdmin) {
+        <div class="text-right py-3">
+            <a href="/post" class="btn btn-outline-secondary btn-sm" role="button" aria-pressed="true">Add new post</a>
+        </div>
+        }
+        
+        <div class="card shadow mb-3">
+            <img src="#(imgPath)" class="card-img-top">
+                <div class="card-header">
+                    <div class="row mx-md-n5">
+                        <div class="col px-md-5"><span class="badge badge-secondary">#(post.category.name)</span></div>
+                        <div class="col px-md-5 text-right">
+                            #for(links in socials) {
+                            <a class="#(links.color)" href="#(links.path)" target="_blank"><i class="#(links.icon)"></i></a>
+                            }
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">#(post.post.title)</h5>
+                    <p class="card-text">#raw(post.post.text_html)</p>
+                    <p class="card-text"><small class="text-muted">#date(post.post.published_at, "dd MMMM yyyy")</small></p>
+                </div>
+                
+        </div>
+    </div>
+    <div class="p-2 bd-highlight px-md-5"></div>
+    <div class="p-2 bd-highlight px-md-5"></div>
+</div>
+}
+
+#embed("base")
+

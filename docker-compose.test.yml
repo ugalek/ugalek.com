@@ -1,0 +1,23 @@
+version: '3'
+services:
+  db_test:
+    image: "postgres:10.9"
+    container_name: ugalek_website_test_db
+    restart: always
+    environment:
+      POSTGRES_DB: ugalek_website_test
+      POSTGRES_USER: ugalek_website_test
+      POSTGRES_PASSWORD: ugalek_website_test
+  test:
+    container_name: ugalek_website_test
+    depends_on: 
+      - db_test
+    build:
+      context: .
+      dockerfile: ./test.Dockerfile
+    environment:
+      DB_HOSTNAME: db_test
+      DB_DATABASE: ugalek_website_test
+      DB_USER: ugalek_website_test
+      DB_PASSWORD: ugalek_website_test
+      DB_PORT: 5432

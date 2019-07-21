@@ -1,0 +1,25 @@
+version: '3'
+services:
+  db:
+    image: "postgres:10.9"
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_USER: ugalek_website
+      POSTGRES_PASSWORD: ugalek_website
+      POSTGRES_DB: ugalek_website
+    volumes:
+      - "./data/dev/postgresql:/var/lib/postgresql"
+  app:
+    build:
+      context: .
+      args:
+        env: dev
+    ports:
+      - 8080:8080
+    environment:
+      DB_HOSTNAME: db
+      DB_DATABASE: ugalek_website
+      DB_USER: ugalek_website
+      DB_PASSWORD: ugalek_website
+      DB_PORT: 5432
