@@ -1,5 +1,7 @@
 # :tada: ugalek.com
 
+[![CircleCI](https://circleci.com/gh/ugalek/ugalek.com/tree/master.svg?style=svg&circle-token=db38b90968b589162837acccfeb72fe8999eac17)](https://circleci.com/gh/ugalek/ugalek.com/tree/master)
+
 Source code of my personal website (written in
 <a href="https://swift.org">Swift</a> on top of <a href="http://vapor.codes">:droplet: Vapor</a>).
 
