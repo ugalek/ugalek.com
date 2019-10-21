@@ -33,7 +33,7 @@ Run it! Now, you can go to: http://localhost:8080.
 
 ## Development
 
-Install [Docker](https://www.docker.com)/
+Install [Docker](https://www.docker.com).
 
 To be sure everything works properly on Linux, you can use the provided Docker configuration:
 
