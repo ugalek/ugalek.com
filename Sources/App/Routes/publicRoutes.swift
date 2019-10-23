@@ -40,12 +40,5 @@ final class PublicRoutes: RouteCollection {
             let controller = HomeController()
             router.get("lang", use: controller.setLanguage)
         }
-
-        // kaniotte
-        do {
-            let controller = KaniotteController()
-            router.get("kaniotte", use: controller.index)
-            router.get("kaniotte/privacy", use: controller.privacy)
-        }
     }
 }
