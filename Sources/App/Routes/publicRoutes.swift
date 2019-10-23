@@ -45,6 +45,7 @@ final class PublicRoutes: RouteCollection {
         do {
             let controller = KaniotteController()
             router.get("kaniotte", use: controller.index)
+            router.get("kaniotte/privacy", use: controller.privacy)
         }
     }
 }

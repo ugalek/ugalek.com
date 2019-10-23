@@ -20,6 +20,10 @@ final class KaniotteController {
         return try request.view().render("kaniotte_en")
     }
 
+    func privacy(request: Request) throws -> Future<View> {
+        return try request.view().render("kaniotte_privacy")
+    }
+        
     func setLanguage(request: Request) throws -> Future<Response> {
         let session = try request.session()
         if let lang = request.query[String.self, at: "l"] {

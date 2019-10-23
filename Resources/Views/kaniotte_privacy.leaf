@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;"  charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1,  maximum-scale=1.0, user-scalable=no">
+        <meta name="author" content="Galina Fabio / Ugalek">
+        <title>Kaniotte</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+        <link href="/styles/product.css" rel="stylesheet">
+    <body style="background-color: #F6F5EE;">
+        <header>
+        <!-- Fixed navbar -->
+            <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+                <a class="navbar-brand" href="/kaniotte"><img border="0" class="center fixedwidth" src="/uploads/kaniotte/logo.png" width="30" height="30"/></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/">Ugalek.com<span class="sr-only"></span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="mailto:kaniotte@ugalek.com">Contacter</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Privacy<span class="sr-only">(current)</span></a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3">
+            <div class="col-md-5 p-lg-5 mx-auto my-5">
+                <h1 class="display-4 font-weight-normal text-center">Kaniotte - Privacy Policy</h1>
+                <p>Last Updated: October 23, 2019</p>
+                <p>
+                This policy applies to all information collected or submitted on Kaniotte iOS app.
+                </p>
+                
+                <h2>Information We Collect</h2>
+                <p>We do not collect personal information such as your name, email address, phone number, or location.
+                All of your app data and settings are only stored on your device or may also be stored in iCloud so that the data syncs
+                to your other iOS devices.
+                </p>
+                
+                <h2>Ads and Analytics</h2>
+                <p>
+                We do not collect anonymous statistics of any kind and do not integrate any ads.
+                </p>
+                
+                <h2>Your Consent</h2>
+                <p>
+                By using this app, you consent to our privacy policy.
+                </p>
+                
+                <h2>Licenses</h2>
+                <h4>Charts</h4>
+                <p><em>© 2016 Daniel Cohen Gindi & Philipp Jahoda</em></p>
+                <p> Licensed under the Apache License,
+                Version 2.0 (the "License"); you may not use this file except in compliance with the License.
+                You may obtain a copy of the License at
+                http://www.apache.org/licenses/LICENSE-2.0
+                Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an
+                "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language
+                governing permissions and limitations under the License.
+                </p>
+                <h4>M13Checkbox</h4>
+                <p><em>© 2018 Brandon McQuilkin</em></p>
+                <p> Is avaiable under MIT Licence. Copyright
+                
+                Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files
+                (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge,
+                publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so,
+                subject to the following conditions:
+                The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+                </p>
+                <p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+                IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+                FITNESS FOR A PARTICULAR PURPOSE AND NON INFRINGEMENT. IN NO EVENT SHALL THE
+                AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+                WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+                OTHER DEALINGS IN THE SOFTWARE.
+                </p>
+                <h4>Icons</h4>
+                <p>Designed by Smashicons from www.flaticon.com</p>
+                
+                <h2>Contact information</h2>
+                <p>If you have any questions, please contact us:</p>
+                <ul>
+                    <li>By email: <a href="mailto:kaniotte@ugalek.com" class="bg-BCA592">kaniotte@ugalek.com</a></li>
+                </ul>
+            </div>
+        </div>
+        <footer class="footer mt-auto py-3">
+            <div class="container text-center">
+                <span class="text-muted">© Kaniotte Copyright 2019</span>
+            </div>
+        </footer>
+    </body>
+</html>

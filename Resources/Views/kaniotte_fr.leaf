@@ -9,95 +9,100 @@
                     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
                         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
                             <link href="/styles/product.css" rel="stylesheet">
-                                <body style="background-color: #F6F5EE;">
-                                    <header>
-                                        <!-- Fixed navbar -->
-                                        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-                                            <a class="navbar-brand" href="#"><img border="0" class="center fixedwidth" src="/uploads/kaniotte/logo.png" width="30" height="30"/></a>
-                                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                                                <span class="navbar-toggler-icon"></span>
-                                            </button>
-                                            <div class="collapse navbar-collapse" id="navbarCollapse">
-                                                <ul class="navbar-nav mr-auto">
-                                                    <li class="nav-item active">
-                                                        <a class="nav-link" href="/">Ugalek.com<span class="sr-only">(current)</span></a>
-                                                    </li>
-                                                    <li class="nav-item">
-                                                        <a class="nav-link" href="mailto:kaniotte@ugalek.com">Contacter</a>
-                                                    </li>
-                                                    </div>
-                                        </nav>
-                                    </header>
-                                    <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3">
-                                        <div class="col-md-5 p-lg-5 mx-auto my-5">
-                                            <h1 class="display-4 font-weight-normal text-center bg-BCA592">Kaniotte</h1>
-                                            <p class="lead font-weight-normal">C'est un gestionnaire de finances gratuit pour gérer revenus et dépenses facilement.</p>
-                                            <p class="text-left">
-                                            <ul>
-                                                <li>Ajouter des revenus et dépenses rapidement</li>
-                                                <li>Utiliser les catégories pré-définies ou créer les vôtres</li>
-                                                <li>Visualiser votre budget par période et catégorie</li>
-                                                <li>Exporter vos diagrammes au format PDF</li>
-                                                <li>Accès protégé à l'aide de Touch ID ou Face ID</li>
-                                            </ul>
-                                            </p>
-                                            <a class="btn" href="#"><img src="/uploads/kaniotte/AppStoreBadgeFR.png"/></a>
-                                        </div>
-                                        <div class="product-device shadow-sm d-none d-md-block"></div>
-                                        <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
-                                    </div>
-                                    
-                                    <div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
-                                        <div class="row justify-content-md-center bg-E4E8F0">
-                                            <div class="col-1 my-2 py-3"></div>
-                                            <div class="col-5 my-5 py-3">
-                                                <h2 class="display-5 text-center bg-BCA592">Visualisationn du budget</h2>
-                                                <table class="table table-borderless">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td>
-                                                                <p class="lead">Statistiques et création de documents PDF. Gestion des dépenses et revenus par catégorie et par période</p>
-                                                            </td>
-                                                        </tr>
-                                                        <tr></tr>
-                                                        <tr>
-                                                            <td class="text-center">
-                                                                <img border="0" src="/uploads/kaniotte/dateFR.png" style="width: 40%;"/>
-                                                            </td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </div>
-                                            <div class="col-4 my-2 py-3">
-                                                <img border="0" class="center" src="/uploads/kaniotte/iPhoneXs1FR.png" style="width: 60%;"/>
-                                            </div>
-                                            <div class="col-3 my-2 py-3"></div>
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
-                                        <div class="row">
-                                            <div class="col-1 my-2 py-3"></div>
-                                            <div class="col-3 my-2 py-3">
-                                                <img src="/uploads/kaniotte/iPhoneXs2FR.png" style="width: 90%;"/>
-                                            </div>
-                                            <div class="col-4">
-                                                <br><br><br>
-                                                <br><br><br>
-                                                <h2 class="display-5 text-center bg-BCA592">Manage votre portefeuille et categories</h2>
-                                                <p class="lead">Ajout de nouvelles dépenses ou revenus. Catégories pré-générées ou personnalisées selons vos préférences (type, nom et couleur)</p>
-                                            </div>
-                                            <div class="col-3 my-2 py-3">
-                                                <img src="/uploads/kaniotte/iPhoneXs4FR.png" style="width: 90%;"/>
-                                            </div>
-                                            <div class="col-1 my-2 py-3"></div>
-                                        </div>
-                                    </div>
-                                    
-                                    <footer class="footer mt-auto py-3">
-                                        <div class="container text-center">
-                                            <span class="text-muted">© Kaniotte Copyright 2019</span>
-                                        </div>
-                                    </footer>
-                                </body>
+    </head>
+    <body style="background-color: #F6F5EE;">
+        <header>
+            <!-- Fixed navbar -->
+            <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+                <a class="navbar-brand" href="#"><img border="0" class="center fixedwidth" src="/uploads/kaniotte/logo.png" width="30" height="30"/></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="/">Ugalek.com<span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="mailto:kaniotte@ugalek.com">Contacter</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/kaniotte/privacy">Privacy</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3">
+            <div class="col-md-5 p-lg-5 mx-auto my-5">
+                <h1 class="display-4 font-weight-normal text-center bg-BCA592">Kaniotte</h1>
+                <p class="lead font-weight-normal">C'est un gestionnaire de finances gratuit pour gérer revenus et dépenses facilement.</p>
+                <p class="text-left">
+                <ul>
+                    <li>Ajouter des revenus et dépenses rapidement</li>
+                    <li>Utiliser les catégories pré-définies ou créer les vôtres</li>
+                    <li>Visualiser votre budget par période et catégorie</li>
+                    <li>Exporter vos diagrammes au format PDF</li>
+                    <li>Accès protégé à l'aide de Touch ID ou Face ID</li>
+                </ul>
+                </p>
+                <a class="btn" href="#"><img src="/uploads/kaniotte/AppStoreBadgeFR.png"/></a>
+            </div>
+            <div class="product-device shadow-sm d-none d-md-block"></div>
+            <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
+        </div>
+        
+        <div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
+            <div class="row justify-content-md-center bg-E4E8F0">
+                <div class="col-1 my-2 py-3"></div>
+                <div class="col-5 my-5 py-3">
+                    <h2 class="display-5 text-center bg-BCA592">Visualisationn du budget</h2>
+                    <table class="table table-borderless">
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <p class="lead">Statistiques et création de documents PDF. Gestion des dépenses et revenus par catégorie et par période</p>
+                                </td>
+                            </tr>
+                            <tr></tr>
+                            <tr>
+                                <td class="text-center">
+                                    <img border="0" src="/uploads/kaniotte/dateFR.png" style="width: 40%;"/>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-4 my-2 py-3">
+                    <img border="0" class="center" src="/uploads/kaniotte/iPhoneXs1FR.png" style="width: 60%;"/>
+                </div>
+                <div class="col-3 my-2 py-3"></div>
+            </div>
+        </div>
+        
+        <div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
+            <div class="row">
+                <div class="col-1 my-2 py-3"></div>
+                <div class="col-3 my-2 py-3">
+                    <img src="/uploads/kaniotte/iPhoneXs2FR.png" style="width: 90%;"/>
+                </div>
+                <div class="col-4">
+                    <br><br><br>
+                    <br><br><br>
+                    <h2 class="display-5 text-center bg-BCA592">Manage votre portefeuille et categories</h2>
+                    <p class="lead">Ajout de nouvelles dépenses ou revenus. Catégories pré-générées ou personnalisées selons vos préférences (type, nom et couleur)</p>
+                </div>
+                <div class="col-3 my-2 py-3">
+                    <img src="/uploads/kaniotte/iPhoneXs4FR.png" style="width: 90%;"/>
+                </div>
+                <div class="col-1 my-2 py-3"></div>
+            </div>
+        </div>
+        
+        <footer class="footer mt-auto py-3">
+            <div class="container text-center">
+                <span class="text-muted">© Kaniotte Copyright 2019</span>
+            </div>
+        </footer>
+    </body>
 </html>
