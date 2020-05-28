@@ -1,6 +1,7 @@
 import FluentPostgreSQL
 
 extension User: Migration {
+    typealias Database = PostgreSQLDatabase
     static func prepare(on connection: PostgreSQLConnection) -> Future<Void> {
         return Database.create(self, on: connection) { builder in
             try addProperties(to: builder)
@@ -10,7 +11,7 @@ extension User: Migration {
 }
 
 extension Category: Migration {
-    
+    typealias Database = PostgreSQLDatabase
     static func prepare(on connection: PostgreSQLConnection) -> Future<Void> {
         
         return Database.create(self, on: connection) { builder in
@@ -27,6 +28,7 @@ extension Category: Migration {
 }
 
 extension Post: Migration {
+    typealias Database = PostgreSQLDatabase
     static func prepare(on connection: PostgreSQLConnection) -> Future<Void> {
         return Database.create(self, on: connection) { builder in
             builder.field(for: idKey)

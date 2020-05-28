@@ -34,9 +34,9 @@ public func configure(_ config: inout Config, _ env: inout Environment, _ servic
     // MARK: Migrations
     
     var migrations = MigrationConfig()
-    migrations.add(model: User.self, database: .psql)
-    migrations.add(model: Category.self, database: .psql)
-    migrations.add(model: Post.self, database: .psql)
+    migrations.add(model: User.self, database: DatabaseIdentifier<User.Database>.psql)
+    migrations.add(model: Category.self, database: DatabaseIdentifier<Category.Database>.psql)
+    migrations.add(model: Post.self, database: DatabaseIdentifier<Post.Database>.psql)
     services.register(migrations)
     
     // MARK: Router
